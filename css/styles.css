@@ -1,0 +1,437 @@
+:root {
+  --bg: #0b0b0b;
+  --fg: #f5f5f5;
+  --accent: #888;
+  --border: #222;
+}
+
+.mode-toggle:checked ~ body,
+body:has(.mode-toggle:checked) {
+  --bg: #f5f5f5;
+  --fg: #0b0b0b;
+  --accent: #555;
+  --border: #ddd;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Manrope', sans-serif;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  /* MODIFIED: Pushed links to the right */
+  justify-content: flex-end; 
+  align-items: center;
+  /* MODIFIED: Added padding-right to avoid the switch */
+  padding: 1rem 7rem 1rem 2rem; 
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  font-family: 'UnifrakturCook', cursive;
+  letter-spacing: 2px;
+  font-size: 1.7rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--bg);
+  padding: 0 2rem;
+}
+
+.hero-content h2 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-weight: 200;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-btn {
+  border: 1px solid var(--fg);
+  color: var(--fg);
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+}
+
+.hero-btn:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.hero-btn.alt {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Sections */
+section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h3 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* About */
+.about {
+  text-align: center;
+}
+
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+
+.about p {
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Works grid */
+.works-grid {
+  display: grid;
+  /* MODIFIED: Changed to a 3-column grid */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.work-item {
+  position: relative;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  /* ADDED: Gives items a consistent shape */
+  aspect-ratio: 3 / 4; 
+  background: var(--border); /* Fallback bg */
+}
+
+/* ADDED: Styles for the new <img> tag */
+.work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* MODIFIED: Updated .work-details styles */
+.work-item .work-details {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  /* MODIFIED: Center the title and button */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  /* MODIFIED: Gradient for better text readability */
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.4) 60%, transparent 80%);
+  color: #fff;
+  transition: opacity 0.3s;
+}
+
+/* MODIFIED: Kept h4 styles, removed p styles from hover */
+.work-details h4 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 1.7rem;
+  margin: 0 0 1rem;
+  color: #fff;
+  transform: translateY(10px);
+  transition: transform 0.4s;
+}
+
+/* MODIFIED: Hover rule for new class */
+.work-item:hover .work-details {
+  opacity: 1;
+}
+
+/* MODIFIED: Apply animations on hover */
+.work-item:hover .work-details h4,
+.work-item:hover .work-details .open-modal-btn {
+  transform: translateY(0);
+}
+
+.work-item:hover img {
+  transform: scale(1.05); /* Slight zoom on image */
+}
+
+
+/* NEW: Styles for the "Open Modal" button */
+.open-modal-btn {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  background: var(--fg);
+  color: var(--bg);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  opacity: 0.9;
+  transform: translateY(10px);
+  transition: transform 0.4s 0.05s, opacity 0.3s;
+}
+
+.open-modal-btn:hover {
+  opacity: 1;
+}
+
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact-link {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Switch styling */
+.mode-toggle {
+  display: none;
+}
+
+.switch {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.slider {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--fg);
+  margin-left: 3px;
+  transition: all 0.4s ease;
+}
+
+.mode-toggle:checked + .switch .slider {
+  margin-left: 27px;
+}
+
+/* =========================================
+  NEW: Modal Styles
+=========================================
+*/
+#modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#modal-content {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  max-width: 900px; /* Max width of the whole modal */
+  width: 100%;
+  max-height: 90vh; /* Max height */
+  display: flex;
+  overflow: hidden; /* To keep child elements contained */
+}
+
+#modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: var(--fg);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+#modal-close:hover {
+  opacity: 1;
+}
+
+#modal-img {
+  flex-basis: 65%;
+  width: 65%;
+  object-fit: contain; /* Show the full image without stretching */
+  background: #000; /* Black bg for any transparent parts */
+}
+
+#modal-text {
+  flex-basis: 35%;
+  width: 35%;
+  padding: 2rem;
+  overflow-y: auto; /* Allow text to scroll if it's too long */
+}
+
+#modal-title {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem;
+  color: var(--fg);
+}
+
+#modal-date {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+#modal-desc {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Responsive styles for the modal */
+@media (max-width: 768px) {
+  #modal-content {
+    flex-direction: column;
+    max-height: 85vh;
+  }
+  
+  #modal-img {
+    flex-basis: auto;
+    width: 100%;
+    max-height: 50vh; /* Limit image height */
+  }
+
+  #modal-text {
+    flex-basis: auto;
+    width: auto;
+    padding: 1.5rem;
+  }
+
+  #modal-title {
+    font-size: 1.8rem;
+  }
+}
+
+.bio-data {
+  display: inline-block;
+  text-align: left;
+  margin-top: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.bio-data ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.bio-data li {
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  margin: 0.2rem 0;
+}
+
+.bio-data strong {
+  font-weight: 500;
+  color: var(--accent);
+  margin-right: 0.4rem;
+}
