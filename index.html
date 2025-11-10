@@ -1,174 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-R" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slavva Aojasha | Digital Illustrator</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale:1.0">
+    <title>Slavva Aojasha - Cyber Sigilist</title>
+    <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
-  <input type="checkbox" id="mode-toggle" class="mode-toggle" />
-  <label for="mode-toggle" class="switch">
-    <span class="slider"></span>
-  </label>
 
-  <header>
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <input type="checkbox" id="mode-toggle-checkbox" class="mode-toggle-input">
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>SLAVVA <span>AOJASHA</span></h2>
-      <p>Digital Illusions & Fading Dreams</p>
-      <div class="hero-links">
-        <a href="#works" class="hero-btn">Enter</a>
-        <a href="#contact" class="hero-btn alt">Contact</a>
-      </div>
+    <div class="page-wrapper">
+        <nav class="navbar">
+            <div class="navbar-links">
+                <a href="#works">Works</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <label for="mode-toggle-checkbox" class="mode-toggle-switch"></label>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <img src="images/slavva1-profile.jpg" alt="profile" class="hero-profile-pic">
+            
+            <h1>Rafika Puteri Ayu Nirmala</h1>
+            <h2>Artist // Tattoo Designer</h2>
+            <div class="hero-buttons">
+                <a href="#works" class="hero-btn">VIEW WORKS</a>
+                <a href="#contact" class="hero-btn-secondary">Quickbook</a>
+            </div>
+        </header>
+
+        <section id="works" class="works-grid">
+            <div class="work-item">
+                <img src="images/Thornscript.jpg" alt="Thornscript" />
+                <div class="work-item-overlay">
+                    <p>Sigil Design 1</p>
+                    <a href="Thornscript" class="view-btn">View</a>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="images/neural-web.jpg" alt="Neural Web" />
+                <div class="work-item-overlay">
+                    <p>Neural Web</p>
+                    <a href="#work-modal-2" class="view-btn">View</a>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="images/signal-bloom.jpg" alt="Signal Bloom" />
+                <div class="work-item-overlay">
+                    <p>Sigil Design 3</p>
+                    <a href="Signal Bloom" class="view-btn">View</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About the Artist</h2>
+            <p>
+                Slavva Aojasha is a tattoo designer specializing in cyber-sigilism — merging the esoteric and the algorithmic.
+                Each piece is a ritual between code and flesh, meticulously drawn for seekers of digital sanctity.
+            </p>
+            <div class="bio-data">
+                <ul>
+                  <li><strong>Name:</strong> Rafika Puteri Ayu Nirmala</li>
+                  <li><strong>Alias:</strong> Slavva Aojasha</li>
+                  <li><strong>Based in:</strong> Surabaya, Indonesia</li>
+                  <li><strong>Specialties:</strong> Cyber-Sigilism, Abstract, Fine-Line Geometry</li>
+                  <li><strong>Experience:</strong> 2+ years in custom tattoo design and body symbology</li>
+                  <li><strong>Mediums Beyond Skin:</strong> Digital Illustration, Tattoo Concept Design</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Commission a Sigil</h2>
+            <p>
+                Each commission begins with an invocation — describe intent, placement and reference. Designs are one-of-a-kind.
+            </p>
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Describe intent / references" rows="6" required></textarea>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="contact-btn">SUBMIT INVOCATION</button>
+                    <button type="button" class="contact-btn">Open Booking</button>
+                </div>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>
+                “Through wire and will, the flesh remembers the code.”<br />
+                © 2025 Slavva Aojasha. All Rights Reserved.
+            </p>
+        </footer>
     </div>
-  </section>
-
-  <section id="about" class="about">
-    <h3>About</h3>
-    <div class="profile-pic">
-      <img src="images/slavva1-profile.jpg" alt="Slavva Aojasha">
-    </div>
-    <p>
-      I’m drawn to the language of symbols — modern, arcane, or invented.
-      Cyber-sigilism is my way of merging old magic with new circuitry: ancient runes reborn through a digital lens.
-
-      When you sit in my chair, you’re not just getting a tattoo — you’re wearing an echo, a whisper of what you’ve survived or what you’re becoming.
-      I don’t decorate; I translate..
-    </p>
-<div class="bio-data">
-    <ul>
-      <li><strong>Name:</strong> Slavva Aojasha</li>
-      <li><strong>Alias:</strong> Rafika Puteri Ayu Nirmala</li>
-      <li><strong>Based in:</strong> Surabaya, Indonesia</li>
-      <li><strong>Specialties:</strong> Cyber-Sigilism, Abstract Blackwork, Fine-Line Geometry</li>
-      <li><strong>Experience:</strong> 2+ years in custom tattoo design and body symbology</li>
-      <li><strong>Mediums Beyond Skin:</strong> Digital Illustration, Tattoo Concept Design</li>
-    </ul>
-  </div>
-  </section>
-
-  <section id="works" class="works">
-    <h3>Works</h3>
-    <div class="works-grid">
-      <div class="work-item" 
-           data-title="Thornscript" 
-           data-date="Created: 2025" 
-           data-description="Living lines where elegance meets peril — a calligraphic vine writing its language in curves and thorns." 
-           data-img-src="images/Thornscript.jpg">
-        <img src="images/Thornscript.jpg" alt="Artwork preview for Thornscript">
-        <div class="work-details">
-          <h4>Thornscript</h4>
-          <button class="open-modal-btn">View Details</button>
+    
+    <div id="work-modal-1" class="modal-window">
+        <div class="modal-content">
+            <a href="#close" class="modal-close" title="Close">&times;</a>
+            <img src="images/Thornscript.jpg" alt="Thornscript" class="modal-img">
+            <h2>Sigil Design 1</h2>
+            <p class="modal-date">Created: 10.28.2025</p>
+            <p class="modal-desc">
+                This is the detailed description for Sigil Design 1. It speaks to the intent of the commission and the references used.
+            </p>
         </div>
-      </div>
-      <div class="work-item" 
-           data-title="Signal Bloom" 
-           data-date="Created: 2025" 
-           data-description="A relic of connection wrapped in thorns — where nature answers the noise of machines with quiet defiance." 
-           data-img-src="images/signal-bloom.jpg">
-        <img src="images/signal-bloom.jpg" alt="Artwork preview for Signal Bloom">
-        <div class="work-details">
-          <h4>Signal Bloom</h4>
-          <button class="open-modal-btn">View Details</button>
-        </div>
-      </div>
-      <div class="work-item" 
-           data-title="Neural Web" 
-           data-date="Created: 2025" 
-           data-description="A web of code and instinct — a creature born between logic and longing." 
-           data-img-src="images/neural-web.jpg">
-        <img src="images/neural-web.jpg" alt="Artwork preview for Neural Web">
-        <div class="work-details">
-          <h4>Neural Web</h4>
-          <button class="open-modal-btn">View Details</button>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <section id="contact" class="contact">
-    <h3>Contact</h3>
-    <p>For commissions, collaborations, or quiet exchanges — reach through the static.</p>
-    <a href="mailto:slavva.aojasha@artmail.com" class="contact-link">slavvaaojasha@gmail.com</a>
-  </section>
-
-  <footer>
-    <p>© 2025 Slavva Aojasha. All artworks are fragments drawn from the void.</p>
-  </footer>
-
-  <div id="modal-backdrop">
-    <div id="modal-content">
-      <button id="modal-close">&times;</button>
-      <img id="modal-img" src="" alt="Full-size artwork">
-      <div id="modal-text">
-        <h4 id="modal-title"></h4>
-        <p id="modal-date"></p>
-        <p id="modal-desc"></p>
-      </div>
+    <div id="work-modal-2" class="modal-window">
+        <div class="modal-content">
+            <a href="#close" class="modal-close" title="Close">&times;</a>
+            <img src="images/neural-web.jpg" alt="Neural Web" class="modal-img">
+            <h2>Sigil Design 2</h2>
+            <p class="modal-date">Created: 11.07.2025</p>
+            <p class="modal-desc">
+                 A complex work representing a digital invocation. This piece blends cyber-sigilism with generative art techniques.
+            </p>
+        </div>
     </div>
-  </div>
-
-  <script>
-    // JS is unchanged
-    document.addEventListener('DOMContentLoaded', () => {
-      const modalBackdrop = document.getElementById('modal-backdrop');
-      const modalContent = document.getElementById('modal-content');
-      const modalClose = document.getElementById('modal-close');
-      const openModalBtns = document.querySelectorAll('.open-modal-btn');
-
-      const modalImg = document.getElementById('modal-img');
-      const modalTitle = document.getElementById('modal-title');
-      const modalDate = document.getElementById('modal-date');
-      const modalDesc = document.getElementById('modal-desc');
-
-      const openModal = (e) => {
-        const workItem = e.target.closest('.work-item');
-        if (!workItem) return;
-
-        const title = workItem.dataset.title;
-        const date = workItem.dataset.date;
-        const description = workItem.dataset.description;
-        const imgSrc = workItem.dataset.imgSrc;
-
-        modalTitle.textContent = title;
-        modalDate.textContent = date;
-        modalDesc.textContent = description;
-        modalImg.src = imgSrc;
-        modalImg.alt = title;
-
-        modalBackdrop.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      };
-
-      const closeModal = () => {
-        modalBackdrop.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      };
-
-      openModalBtns.forEach(btn => {
-        btn.addEventListener('click', openModal);
-      });
-
-      modalClose.addEventListener('click', closeModal);
-
-      modalBackdrop.addEventListener('click', (e) => {
-        if (e.target === modalBackdrop) {
-          closeModal();
-        }
-      });
-    });
-  </script>
+    
+    <div id="work-modal-3" class="modal-window">
+        <div class="modal-content">
+            <a href="#close" class="modal-close" title="Close">&times;</a>
+            <img src="images/signal-bloom.jpg" alt="Signal Bloom" class="modal-img">
+            <h2>Sigil Design 3</h2>
+            <p class="modal-date">Created: 11.05.2025</p>
+            <p class="modal-desc">
+                This sigil was designed for a client seeking protection in the digital realm. The design incorporates elements of circuitry and ancient runes.
+            </p>
+        </div>
+    </div>
 
 </body>
 </html>
