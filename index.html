@@ -1,141 +1,77 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale:1.0">
-    <title>Slavva Aojasha - Cyber Sigilist</title>
-    <link rel="stylesheet" href="css/styles.css"> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slavva Aojasha — Cyber Sigilist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/styles.css">
 </head>
-<body>
+<body class="noise-bg">
+  <div class="site">
+    <header class="nav">
+      <div class="brand"><div class="name">Slavva Aojasha</div><div class="role">Cyber Sigilist</div></div>
+      <nav class="main-links"><a href="#works">Works</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    </header>
 
-    <input type="checkbox" id="mode-toggle-checkbox" class="mode-toggle-input">
+    <section class="hero">
+      <img class="profile-pic" src="images/slavva1-profile.jpg" alt="Portrait of Slavva Aojasha">
+      <div class="titles">
+        <h1>Slavva Aojasha</h1>
+        <h2>Artist · Fine-line Tattoo & Cyber-Sigil Design</h2>
+        <p class="lead">The body is a relic; the line, a spell. I craft restrained sigils and fine-line marks that read like quiet rituals—designed for skin and translated for the screen.</p>
+        <div class="actions"><a class="btn primary" href="#works">View Works</a><a class="btn ghost" href="#contact">Book a Rite</a></div>
+      </div>
+    </section>
 
-    <div class="page-wrapper">
-        <nav class="navbar">
-            <div class="navbar-links">
-                <a href="#works">Works</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <label for="mode-toggle-checkbox" class="mode-toggle-switch"></label>
-            </div>
-        </nav>
+    <div class="divider"></div>
 
-        <header class="hero">
-            <img src="images/slavva1-profile.jpg" alt="profile" class="hero-profile-pic">
-            
-            <h1>Rafika Puteri Ayu Nirmala</h1>
-            <h2>Artist // Tattoo Designer</h2>
-            <div class="hero-buttons">
-                <a href="#works" class="hero-btn">VIEW WORKS</a>
-                <a href="#contact" class="hero-btn-secondary">Quickbook</a>
-            </div>
-        </header>
+    <section class="works" id="works">
+      <header><h3 class="section-title">Rite of Line</h3><div class="section-sub">Selected Commissions & Concepts</div></header>
+      <div class="grid">
+        <article class="card"><img src="images/Thornscript.jpg" alt="Thornscript"><div class="meta"><div class="title">ThornScript</div><button class="cta" data-title="ThornScript" data-date="Oct 28, 2025" data-desc="A sigil drawn from pain-language and pattern, bridging ornament and invocation.">View</button></div></article>
+        <article class="card"><img src="images/neural-web.jpg" alt="Neural Web"><div class="meta"><div class="title">Neural Web</div><button class="cta" data-title="Neural Web" data-date="Nov 7, 2025" data-desc="A generative composition merging circuit paths with organic motion—echoing a digital consciousness.">View</button></div></article>
+        <article class="card"><img src="images/signal-bloom.jpg" alt="Signal Bloom"><div class="meta"><div class="title">Signal Bloom</div><button class="cta" data-title="Signal Bloom" data-date="Nov 5, 2025" data-desc="Designed as a protective glyph for digital wanderers; circuitry meets ancient runes in symmetry.">View</button></div></article>
+      </div>
+    </section>
 
-        <section id="works" class="works-grid">
-            <div class="work-item">
-                <img src="images/Thornscript.jpg" alt="Thornscript" />
-                <div class="work-item-overlay">
-                    <p>ThornScript</p>
-                    <a href="Thornscript" class="view-btn">View</a>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="images/neural-web.jpg" alt="Neural Web" />
-                <div class="work-item-overlay">
-                    <p>Neural Web</p>
-                    <a href="#work-modal-2" class="view-btn">View</a>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="images/signal-bloom.jpg" alt="Signal Bloom" />
-                <div class="work-item-overlay">
-                    <p>Sigil Design</p>
-                    <a href="Signal Bloom" class="view-btn">View</a>
-                </div>
-            </div>
-        </section>
+    <section class="about" id="about">
+      <h3 class="section-title">Manifesto</h3>
+      <p class="lead">I approach linework like a quiet architecture—economy of mark, intentional negative space, and symbols that read at skin temperature. Commissions range from subtle talismans to complex compositions that bridge ritual and circuitry.</p>
+      <ul class="bio">
+        <li><span class="label">Alias:</span> Slavva Aojasha</li>
+        <li><span class="label">Based in:</span> Surabaya, Indonesia</li>
+        <li><span class="label">Specialties:</span> Cyber-sigilism · Fine-line</li>
+        <li><span class="label">Other mediums:</span> Digital illustration · Concept design</li>
+      </ul>
+    </section>
 
-        <section id="about" class="about">
-            <h2>About the Artist</h2>
-            <p>
-                Slavva Aojasha is a tattoo designer specializing in cyber-sigilism — merging the esoteric and the algorithmic.
-                Each piece is a ritual between code and flesh, meticulously drawn for seekers of digital sanctity.
-            </p>
-            <div class="bio-data">
-                <ul>
-                  <li><strong>Name:</strong> Rafika Puteri Ayu Nirmala</li>
-                  <li><strong>Alias:</strong> Slavva Aojasha</li>
-                  <li><strong>Based in:</strong> Surabaya, Indonesia</li>
-                  <li><strong>Specialties:</strong> Cyber-Sigilism, Abstract, Fine-Line Geometry</li>
-                  <li><strong>Experience:</strong> 2+ years in custom tattoo design and body symbology</li>
-                  <li><strong>Mediums Beyond Skin:</strong> Digital Illustration, Tattoo Concept Design</li>
-                </ul>
-            </div>
-        </section>
+    <section class="contact" id="contact">
+      <h3 class="section-title">Book a Rite</h3>
+      <p>Begin by sharing intent, preferred placement, and any reference images. Each request initiates a ritual of design.</p>
+      <form>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="text" name="placement" placeholder="Placement (e.g. forearm, chest)" required>
+        <textarea name="notes" placeholder="Brief concept / references / availability" required></textarea>
+        <div class="submit"><button class="btn primary" type="submit">Submit Invocation</button><a class="btn ghost" href="mailto:hello@slavva.example">Email Directly</a></div>
+      </form>
+    </section>
 
-        <section id="contact" class="contact">
-            <h2>Commission a Sigil</h2>
-            <p>
-                Each commission begins with an invocation — describe intent, placement and reference. Designs are one-of-a-kind.
-            </p>
-            
-            <form class="contact-form">
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Describe intent / references" rows="6" required></textarea>
-                
-                <div class="form-buttons">
-                    <button type="submit" class="contact-btn">SUBMIT INVOCATION</button>
-                    <button type="button" class="contact-btn">Open Booking</button>
-                </div>
-            </form>
-        </section>
+    <footer>© 2025 Slavva Aojasha — A restrained digital grimoire</footer>
+  </div>
 
-        <footer class="footer">
-            <p>
-                “Through wire and will, the flesh remembers the code.”<br />
-                © 2025 Slavva Aojasha. All Rights Reserved.
-            </p>
-        </footer>
-    </div>
-    
-    <div id="work-modal-1" class="modal-window">
-        <div class="modal-content">
-            <a href="#close" class="modal-close" title="Close">&times;</a>
-            <img src="images/Thornscript.jpg" alt="Thornscript" class="modal-img">
-            <h2>Thornscript/h2>
-            <p class="modal-date">Created: 10.28.2025</p>
-            <p class="modal-desc">
-                This is the detailed description for Sigil Design 1. It speaks to the intent of the commission and the references used.
-            </p>
-        </div>
-    </div>
+  <div class="modal" id="modal">
+    <div class="modal-content"><h4 id="modal-title"></h4><div class="date" id="modal-date"></div><p id="modal-desc"></p><button class="close-btn" id="close-modal">Close</button></div>
+  </div>
 
-    <div id="work-modal-2" class="modal-window">
-        <div class="modal-content">
-            <a href="#close" class="modal-close" title="Close">&times;</a>
-            <img src="images/neural-web.jpg" alt="Neural Web" class="modal-img">
-            <h2>Neural Web</h2>
-            <p class="modal-date">Created: 11.07.2025</p>
-            <p class="modal-desc">
-                 A complex work representing a digital invocation. This piece blends cyber-sigilism with generative art techniques.
-            </p>
-        </div>
-    </div>
-    
-    <div id="work-modal-3" class="modal-window">
-        <div class="modal-content">
-            <a href="#close" class="modal-close" title="Close">&times;</a>
-            <img src="images/signal-bloom.jpg" alt="Signal Bloom" class="modal-img">
-            <h2>Signal Bloom</h2>
-            <p class="modal-date">Created: 11.05.2025</p>
-            <p class="modal-desc">
-                This sigil was designed for a client seeking protection in the digital realm. The design incorporates elements of circuitry and ancient runes.
-            </p>,..ll/
-        </div>
-    </div>
-
+  <script>
+    const modal=document.getElementById('modal');const title=document.getElementById('modal-title');const date=document.getElementById('modal-date');const desc=document.getElementById('modal-desc');const closeBtn=document.getElementById('close-modal');
+    document.querySelectorAll('.cta').forEach(btn=>{btn.addEventListener('click',()=>{title.textContent=btn.dataset.title;date.textContent='Created: '+btn.dataset.date;desc.textContent=btn.dataset.desc;modal.classList.add('active');});});
+    closeBtn.addEventListener('click',()=>modal.classList.remove('active'));
+    modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('active')});
+  </script>
 </body>
 </html>
-
 
